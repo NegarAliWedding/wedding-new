@@ -5,7 +5,7 @@
   }
 @font-face {
     font-family: "stusi";
-    src: url('https://raw.githubusercontent.com/NegarAliWedding/wedding/main/Ms%20Stusi.otf') format("opentype");
+    src: url('https://raw.githubusercontent.com/NegarAliWedding/wedding-new/main/Ms%20Stusi.otf') format("opentype");
 }
 html {
   scroll-behavior: smooth;
@@ -46,7 +46,7 @@ body, html {
   position: absolute;
   inset: 0;
   height: 100%;
-  background: url('https://raw.githubusercontent.com/NegarAliWedding/wedding/main/IMG_0694%20(1)%20(1).jpeg') top center/cover no-repeat;
+  background: url('https://raw.githubusercontent.com/NegarAliWedding/wedding-new/main/IMG_0694%20(1)%20(1).jpeg') top center/cover no-repeat;
   z-index: 1;
   border-radius: 20px;
   }
