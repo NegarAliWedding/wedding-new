@@ -1,0 +1,423 @@
+
+@font-face {
+    font-family: "Nastaliq";
+    src: url('./Shekasteh\ V2.001.ttf') format("truetype");
+  }
+@font-face {
+    font-family: "stusi";
+    src: url('https://raw.githubusercontent.com/NegarAliWedding/wedding/main/Ms%20Stusi.otf') format("opentype");
+}
+html {
+  scroll-behavior: smooth;
+  /* width:   ; */
+  justify-content: center;
+
+}
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #faf8f5;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  overflow-x: hidden;
+}
+
+.card {
+  position: relative;
+  width: 390px;
+  height: 100vh;
+  border-radius: 30px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.25);
+  background: #ffffff;
+  align-items: center;
+  justify-content: center;
+  margin: 0px auto 100px auto;
+}
+
+.top {
+    position: relative;
+    height: 100vh;
+  }
+
+.background {
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  background: url('https://raw.githubusercontent.com/NegarAliWedding/wedding/main/IMG_0694%20(1)%20(1).jpeg') top center/cover no-repeat;
+  z-index: 1;
+  border-radius: 20px;
+  }
+
+.fade {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%, #fff 100%);
+  z-index: 2;
+  border-radius: 20px;
+}
+
+
+.content {
+  position: relative;
+  z-index: 3;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  padding: 0px 20px 0px 20px;
+  gap: 0px;
+}
+
+.invante {
+  font-family: "Nastaliq", serif;
+  font-size: 15px;
+  color:rgba(196, 164, 132, 0.9);
+  margin: 0px;
+}
+
+.logo {
+  font-family: 'stusi', serif;
+  text-transform: uppercase;
+  font-size: 46px;
+  color: #444;
+  z-index: 3;
+}
+
+.invitation {
+  font-family: "Nastaliq", serif;
+  font-size: 30px;
+  line-height: 0.5;
+  color: #333;
+  opacity: 0.5;
+  z-index: 3;
+  display: flex;
+  flex-direction: row;
+}
+.invitation p{
+  margin: 20px 0;
+  z-index: 3;
+  word-spacing: 3px;
+  font-size: 30px;
+}
+
+.names {
+  font-family: "Nastaliq", serif;
+  font-size: 70px;
+  color: #555;
+  margin: 0px;
+  opacity: 0.7;
+  z-index: 3;
+}
+.names p {
+  z-index: 3;
+  margin: 0px;
+  
+}
+
+.date-card {
+  text-align: center;
+  color: #5c3d2e; /* موکا */
+  margin-top:10px ;
+}
+
+.date-card .row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  position: relative;
+}
+
+.day-number {
+  font-size: 20px;
+  font-family: "stusi",serif;
+  margin: 0 20px;
+}
+.year {
+  font-size: 20px;
+  font-family: "stusi",serif;
+  margin: 0 20px;
+}
+.month {
+  font-family: "Nastaliq", serif;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+
+.icons-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+}
+
+.icons-row .icon-box i {
+  font-size: 30px;
+  color: rgba(196, 164, 132, 0.6); 
+  transition: all 0.3s ease;
+}
+
+.icons-row .icon-box i:hover {
+  color: rgba(196, 164, 132, 0.9); 
+  transform: scale(1.6);
+}
+
+.icon {
+  font-size: 28px;
+  margin-bottom: 8px;
+}
+
+.icon-box p {
+  font-family: "Nastaliq", serif;
+  font-size: 20px;
+  color: #333;
+  margin: 0;
+  text-align: center;
+}
+
+.icon-box a {
+  display: flex; /* اضافه شد: flex برای پر کردن کل فضا */
+  flex-direction: column; /* اضافه شد: جهت ستونی مثل icon-box */
+  align-items: center; /* اضافه شد: مرکز افقی */
+  justify-content: center; /* اضافه شد: مرکز عمودی (اختیاری، اگر بخوای محتوا وسط باشه) */
+  width: 100%; /* اضافه شد: عرض کامل */
+  height: 100%; /* اضافه شد: ارتفاع کامل */
+  text-decoration: none; /* اضافه شد: حذف زیرخط لینک */
+  padding: 15px; /* اضافه شد: پدینگ کل باکس (از p منتقل شد) */
+  cursor: pointer; /* این قبلاً بود، نگه داشتم */
+}
+
+.timeline {
+  position: relative;
+  margin: 100px auto 0px auto;
+  padding: 40px 0px 0px 0px ;
+  width: 90%;
+  height: 100%;
+  max-width: 500px;
+}
+
+/* خط وسط */
+.timeline::before {
+  content: '';
+  position: absolute;
+  margin-top: 10px;
+  top: 0px;
+  bottom: 0px;
+  left: 50%;
+  width: 2px;
+  height: 120vh;
+  background: #c4a484; /* کرم موکا */
+  transform: translateX(-50%);
+}
+
+/* دایره بالا */
+.timeline::after,
+.timeline::before-end {
+  content: '';
+  position: absolute;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: #c4a484;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+/* دایره بالایی */
+.timeline::after {
+  top: 0;
+}
+
+/* دایره پایینی */
+.timeline::before-end {
+  bottom: 0;
+}
+
+.start-circle {
+  position: absolute;
+  top: 0px;
+  bottom: 0;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: #c4a484;
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+/* .end-circle {
+  position: absolute;
+  bottom: -120px;
+  left: 50%;
+  width: 14px;
+  height: 14px;
+  background: #c4a484;
+  border-radius: 50%;
+  transform: translateX(-50%);
+} */
+.event {
+  position: relative;
+  width: 45%;
+  padding: 0px 20px;
+  background: #faf8f5;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0px;
+}
+
+.event.left {
+  left: -20px;
+  width: 40%;
+  margin: -50px 0px;
+}
+
+.event.right {
+  left: 55%;
+  margin: -50px 0px;
+}
+
+
+.event.right::before {
+  left: auto;
+  right: -32px;
+}
+
+.event .time {
+  font-family: "stusi";
+  font-weight: bold;
+  color: #a88a5c;
+  display: block;
+  font-size: 40px;
+}
+.event p {
+  font-family: "Nastaliq", serif;
+  font-size: 20px;
+  margin-bottom: 8px;
+  margin-top: 10px;
+}
+
+.event i {
+  font-size: 22px;
+  color: #c4a484;
+  margin-top: 8px;
+}
+
+
+
+
+#play-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  background: rgba(196, 164, 132, 0.9); /* رنگ طلایی-موکا */
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  z-index: 9999;
+  transition: all 0.3s ease;
+}
+
+#play-btn:hover {
+  transform: scale(1.1);
+  background: rgba(196, 164, 132, 1);
+}
+
+.event-1 {
+  width: 100%;
+  text-align: center;
+  /* margin: 80px auto 40px auto; فاصله از تایم‌لاین */
+  /* padding: 20px; */
+  font-family: "Nastaliq", serif;
+  font-size: 20px;
+  color: rgba(196, 164, 132, 0.9);
+  margin: 0px;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+
+  /* clear: both;   خیلی مهم: بیاد زیر همه‌ی event ها */
+  /* border-top: 1px solid rgba(196, 164, 132, 0.5);   */
+}
+
+
+
+.event-1 p,
+.event-1 span {
+  font-family: "Nastaliq";
+  display: block;
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+
+.envelope-screen {
+  position: fixed;
+  inset: 0;
+  background: #faf8f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 10000;
+  transition: opacity 1s ease;
+}
+
+.envelope-screen.fade-out {
+  opacity: 0;
+}
+
+.envelope {
+  text-align: center;
+  cursor: pointer;
+  animation: bounce 1.5s infinite;
+  background: #f7eee7;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+}
+
+.envelope img {
+  font-size: 80px;
+  color: rgba(196, 164, 132, 0.9); /* رنگ طلایی */
+  width: 350px;
+  height: 80%;
+}
+
+.envelope p {
+  font-family: "Nastaliq", serif;
+  font-size: 20px;
+  color: #444;
+  margin-top: 15px;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}

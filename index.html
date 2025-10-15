@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fa">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>کارت عروسی</title>
+  <link rel="stylesheet" href="index.css">
+  
+</head>
+
+<body>
+  <div id="envelope-screen" class="envelope-screen">
+    <div class="envelope">
+      <img src="https://raw.githubusercontent.com/NegarAliWedding/wedding/main/IMG_0712.jpeg" alt="">
+      <!-- <i class="fa-solid fa-envelope"></i> -->
+      <p>برای باز کردن دعوتنامه کلیک کنید</p>
+    </div>
+  </div>
+  <div class="main-contant">
+      <div class="card">
+
+    <div class="top">
+      <div class="background"></div>
+      <div class="fade"></div>
+      <div class="content">
+        <div class="names"><p>علی و نگار</p></div>
+        <div class="invitation">
+          <p>معشوق به سامان شد تا باد چنین بادا</p>
+          
+        </div>
+        <div class="date-card">
+          <div class="row">
+            <div class="year">1404</div>
+            <div class="month">مهر</div>
+            <span class="day-number">25</span>
+          </div>
+        </div>
+        <p class="invante">با شادی و عشق فراوان، شما را به جشن ازدواجمان دعوت می‌کنیم </p>
+        <div class="icons-row">
+          <div class="icon-box">
+            <a href="https://nshn.ir/dc_bfWxZp5tJ_m" target="_blank">
+              <i class="fa-solid fa-location-dot"></i>
+            </a>
+          </div>
+          <div class="icon-box">
+            <a href="#timeline">
+              <i class="fa-solid fa-clock"></i>
+            </a>
+          </div>
+        </div>
+        <div class="event-1">
+          <p>میزبان حضور گرمتان هستیم. نصیری٬علیمحمدی</p>    
+        </div>
+      </div>
+    </div>
+
+  </div>  
+  <div id="timeline" class="timeline">
+    <div class="start-circle"></div>
+    <div class="event left">
+      <span class="time">16:00</span>
+      <i class="fa-solid fa-church"></i>
+      <p>ورود و خوشامدگویی</p>
+    </div>
+
+    <div class="event right">
+      <span class="time">16:30</span>
+      <i class="fa-solid fa-ring"></i>
+      <p>مراسم عقد</p>
+    </div>
+
+    <div class="event left">
+      <span class="time">17:30</span>
+      <i class="fa-solid fa-camera"></i>
+      <p>عکس یادگاری</p>
+    </div>
+
+    <div class="event right">
+      <span class="time">18:00</span>
+      <i class="fas fa-glass-cheers"></i>
+      <p>رقص و جشن</p>
+    </div>
+
+    <div class="event left">
+      <span class="time">20:30</span>
+      <i class="fa-solid fa-cake-candles"></i>
+      <p> برش کیک  </p>
+    </div>
+    <div class="event right">
+      <span class="time">21:00</span>
+      <i class="fa-solid fa-utensils"></i>
+      <p> سرو شام </p>
+    </div>
+    <div class="event left">
+      <span class="time">22:00</span>
+      <i class="fa-solid fa-hand"></i>
+      <p> حنابندان </p>
+    </div>
+
+    <div class="event right">
+      <span class="time"><i class="fas fa-infinity"></i></span>
+      <!-- <i class="fa-solid fa-car"></i> -->
+      <p> پایان مراسم </p>
+    </div>
+    
+    <!-- <div class="end-circle"></div> -->
+  </div>
+  </div>
+
+
+  <!-- موزیک پس‌زمینه -->
+
+<audio id="bg-music" loop>
+  
+  <source src="https://raw.githubusercontent.com/NegarAliWedding/wedding/main/Untitled_(Converted)_out.mp3" type="audio/mpeg">
+</audio>
+
+<!-- دکمه شناور پخش موزیک -->
+<!-- <button id="play-btn">
+  <i class="fa-solid fa-music"></i>
+</button> -->
+
+<!-- <script>
+  const btn = document.getElementById("play-btn");
+  const music = document.getElementById("bg-music");
+  let playing = false;
+
+  btn.addEventListener("click", () => {
+    if (!playing) {
+      music.play();
+      btn.innerHTML = '<i class="fa-solid fa-pause"></i>'; // آیکون توقف
+    } else {
+      music.pause();
+      btn.innerHTML = '<i class="fa-solid fa-music"></i>'; // آیکون موزیک
+    }
+    playing = !playing;
+  });
+</script> -->
+<!-- <script>
+  const envelopeScreen = document.getElementById("envelope-screen");
+  const mainCard = document.getElementById("main-card");
+
+  envelopeScreen.addEventListener("click", () => {
+    envelopeScreen.classList.add("fade-out"); // اجرای انیمیشن محو شدن
+    setTimeout(() => {
+      envelopeScreen.style.display = "none";
+      mainCard.style.display = "block";
+    }, 1000); // بعد از ۱ ثانیه (زمان انیمیشن) محتوای اصلی نشون بده
+  });
+</script> -->
+<script>
+  const envelopeScreen = document.getElementById("envelope-screen");
+  const mainCard = document.querySelector(".main-contant"); // اینو اصلاح کردم چون آیدی نداشت
+  const music = document.getElementById("bg-music");
+  const btn = document.getElementById("play-btn");
+
+  envelopeScreen.addEventListener("click", () => {
+    envelopeScreen.classList.add("fade-out");
+
+    setTimeout(() => {
+      envelopeScreen.style.display = "none";
+      mainCard.style.display = "block";
+
+      // 🎵 موزیک شروع میشه
+      music.play();
+      btn.innerHTML = '<i class="fa-solid fa-pause"></i>'; // آیکون دکمه رو هم تغییر بده
+    }, 1000);
+  });
+</script>
+
+</body>
+</html>
